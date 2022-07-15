@@ -180,12 +180,12 @@
       </template>
 
       <!-- Source -->
-      <template v-if="post.data.source.length">
+      <template v-if="post.data.sources.length">
         <div class="w-full p-1 text-center">
           <template v-if="isUrl">
             <!-- If text is an Url then make it linkable -->
             <a
-              :href="post.data.source[0]"
+              :href="post.data.sources[0]"
               class="inline-flex gap-2 link"
               target="_blank"
               rel="noopener nofollow"
@@ -294,14 +294,14 @@ export default {
 
     // #region Post media
     isUrl() {
-      if (!this.post.data.source.length) {
+      if (!this.post.data.sources.length) {
         return false
       }
 
       let sourceUrl
 
       try {
-        sourceUrl = new URL(this.post.data.source[0])
+        sourceUrl = new URL(this.post.data.sources[0])
       } catch {
         return false
       }
@@ -310,16 +310,16 @@ export default {
     },
 
     sourceText() {
-      if (!this.post.data.source.length) {
+      if (!this.post.data.sources.length) {
         return null
       }
 
       if (this.isUrl) {
-        return new URL(this.post.data.source[0]).hostname
+        return new URL(this.post.data.sources[0]).hostname
       }
 
       // Return the entire source as it's text
-      return this.post.data.source[0]
+      return this.post.data.sources[0]
     },
     // #endregion
   },
