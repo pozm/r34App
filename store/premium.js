@@ -1,8 +1,7 @@
 export const getters = {
   isUserPremium(state, getters, rootState, rootGetters) {
     return (
-      rootState.authentication.loggedIn &&
-      rootState.authentication.user?.is_subscription_valid
+      true
     )
   },
 
