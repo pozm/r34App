@@ -1,0 +1,1 @@
+.search-enter,.search-leave-to{transform:translateX(100vw)}.search-enter-to{transform:translateX(0)}.search-enter-active,.search-leave-active{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s}
