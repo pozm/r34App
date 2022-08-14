@@ -6,13 +6,13 @@ export const getters = {
   },
 
   getUserEmail(state, getters, rootState, rootGetters) {
-    return rootState.authentication.user?.email
+    return "fbi@gov.uk"
   },
 }
 
 export const mutations = {
   setLicenseKey(state, value) {
-    state.gumroad.product.license_key = value
+    state.gumroad.product.license_key = "Bought"
   },
 }
 
